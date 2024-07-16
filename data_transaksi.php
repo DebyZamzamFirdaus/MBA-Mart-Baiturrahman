@@ -170,6 +170,13 @@ $query = $db_object->db_query($sql);
                     </div>
 
                     <div class="col-12">
+                        <label for="" class="font-weight-bold">Faktur</label>
+                        <div class="form-group">
+                            <textarea class="form-control" name="faktur" rows="3" required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
                         <label for="" class="font-weight-bold">Produk</label>
                         <div class="form-group">
                             <textarea class="form-control" name="produk" rows="3" required=""></textarea>
@@ -213,6 +220,7 @@ $query = $db_object->db_query($sql);
                 <tr align="center">
                     <th>No</th>
                     <th>Tanggal</th>
+                    <th>Faktur</th>
                     <th>Produk</th>
                     <th width="15%">Aksi</th>
                 </tr>
@@ -224,6 +232,7 @@ $query = $db_object->db_query($sql);
                 <tr>
                     <td class='text-center'> <?= $no ?></td>
                     <td class='text-center'> <?= format_date2($row['transaction_date']) ?></td>
+                    <td> <?= $row['faktur'] ?></td>
                     <td> <?= $row['produk'] ?></td>
                     <td class='text-center'>
                         <div class='btn-group' role='group'>

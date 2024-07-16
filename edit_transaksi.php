@@ -18,8 +18,9 @@ $query = $db_object->db_query($sql);
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $transaction_date = $_POST['transaction_date'];
+    $faktur = $_POST['faktur'];
     $produk = $_POST['produk'];
-    $sql = "UPDATE transaksi SET transaction_date='$transaction_date',produk='$produk' WHERE id='$id'";
+    $sql = "UPDATE transaksi SET transaction_date='$transaction_date',faktur='$faktur',produk='$produk' WHERE id='$id'";
     $db_object->db_query($sql);
     if ($sql) {
         echo "<script> location.replace('?menu=data_transaksi&pesan_success=Data berhasil diupdate'); </script>";
@@ -55,6 +56,13 @@ if (isset($_POST['update'])) {
                     <div class="form-group">
                         <input type="hidden" name="id" class="form-control" value="<?= $data['id'] ?>">
                         <input type="date" name="transaction_date" value="<?= $data['transaction_date'] ?>" class="form-control" required="" />
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="" class="font-weight-bold">Faktur</label>
+                    <div class="form-group">
+                        <textarea class="form-control" name="faktur" rows="3" required=""><?= $data['faktur'] ?></textarea>
                     </div>
                 </div>
 
