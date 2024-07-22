@@ -56,7 +56,7 @@ $pdf->Cell(28, 1, 'Laporan Hasil Analisa Mart Baiturrahman', 'LRTB', 0, 'C'); //
 $pdf->Ln();
 $pdf->Ln();
 
-$pdf->Cell(1, 1, 'No', 'LRTB', 0, 'C');
+$pdf->Cell(1, 1, 'No.', 'LRTB', 0, 'C');
 $pdf->Cell(24, 1, 'Rule', 'LRTB', 0, 'C');
 $pdf->Cell(3, 1, 'Confidence', 'LRTB', 0, 'C');
 $pdf->Ln();
