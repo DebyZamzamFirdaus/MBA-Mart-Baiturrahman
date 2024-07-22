@@ -53,9 +53,9 @@ include_once 'fungsi.php';
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
-          <i class="fas fa-mosque"></i>
+          <i class="fas fa-shopping-cart"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">APRIORI CMAR</div>
+        <div class="sidebar-brand-text mx-3">Mart Baiturrahman</div>
       </a>
 
       <?php
@@ -90,13 +90,13 @@ include_once 'fungsi.php';
 
       <li class="nav-item <?php echo ($menu_active == 'proses_apriori') ? "active" : ""; ?>">
         <a class="nav-link" href="index.php?menu=proses_apriori">
-          <i class="fas fa-fw fa-sync"></i>
+          <i class="fas fa-fw fa-hourglass-start"></i>
           <span>Proses Apriori</span></a>
       </li>
 
       <li class="nav-item <?php echo ($menu_active == 'proses_cmar') ? "active" : ""; ?>">
         <a class="nav-link" href="index.php?menu=proses_cmar">
-          <i class="fas fa-fw fa-sync"></i>
+          <i class="fas fa-fw fa-hourglass-end"></i>
           <span>Proses CMAR</span></a>
       </li>
 
@@ -106,7 +106,7 @@ include_once 'fungsi.php';
 
                           ?>">
         <a class="nav-link" href="index.php?menu=hasil">
-          <i class="fas fa-fw fa-coins"></i>
+          <i class="fas fa-fw fa-clipboard-list"></i>
           <span>Data Hasil</span></a>
       </li>
 

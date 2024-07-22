@@ -49,7 +49,7 @@ include_once "mining.php";
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="bg-success text-white">
                 <tr align="center">
-                    <th>No</th>
+                    <th>No.</th>
                     <th>Dari Tanggal</th>
                     <th>Sampai Tanggal</th>
                     <th>Minimum Support</th>

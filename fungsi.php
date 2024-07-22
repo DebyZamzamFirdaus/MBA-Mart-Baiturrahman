@@ -9,213 +9,10 @@ function can_access_menu($menu){
     }
     return false;
 }
-//START USERS===================================================================
-/**
- * combobox list users dengan text didepannya (for input form)
- * @param string $label default=''
- * @param string $name default=''
- * @param string $value default=''
- * @param boolean $required default=false
- * @param boolean $all default=false
- * @param string $text_all default='-' tulisan dipilihan all
- * @param string $where default='' kondisi query, tulisan where sudah ada tinggal tambahkan sendiri...
- * @param string $params defaulr=''
- */
-function text_with_list_users($label='', $name='', $value='', $required=false, $all=false, $text_all='-',$where='', $params='')
-{
-//	start_row();
-//            start_column("width='10%'");
-                    label($label);
-//            end_column();
-//            start_column();
-                    list_users($name, $value, $required, $all, $text_all, $where, $params);
-//            end_column();
-//	end_row();
-}
 
-/**
- * data list users (from db: users)
- * @param string $name
- * @param string $selected_id default=''
- * @param boolean $required default=false
- * @param boolean $all default=false
- * @param string $text_all default='-' tulisan dipilihan all
- * @param string $where default='' kondisi query, tuisan where sudah ada tingggal tambahkan sendiri...
- * @param string $params default=''
- */
-function list_users($name, $selected_id='', $required=false, $all=false, $text_all='-', $where='', $params=''){
-        $db_obj = new database();
-        
-	$table = TB_PREF."users";
-        $query = $db_obj->display_table_all_column($table, $where, false, false, 0, 0, 'nama');
-	echo "<select name='$name' "; if($required) echo "required='required'"; echo " class='form-control' ".$params." >";
-        //pilihan semua / kosong
-        if($all){                
-            echo "<option value=''> $text_all </option>";
-        }
-	
-        //loop data
-        while($myrow = $db_obj->db_fetch_array($query)){	
-            echo "<option value='".$myrow['id']."' "; if($selected_id==$myrow['id']) echo "selected='selected'";
-            echo ">".$myrow['user_id']." -> ".$myrow['nama']."</option>";		
-        }
-	echo "</select>";
-}
-//END USERS===================================================================
-
-//START LEVEL USERS===================================================================
-/**
- * combobox list level user dengan text didepannya (for input form)
- * @param string $label default=''
- * @param string $name default=''
- * @param string $value default=''
- * @param boolean $required default=false
- * @param boolean $all default=false
- * @param string $text_all default='-' tulisan dipilihan all
- * @param string $where default='' kondisi query, tuisan where sudah ada tingggal tambahkan sendiri...
- * @param string $params default=''
- */
-function text_with_list_levels($label='', $name='', $value='', $required=false, $all=false, $text_all='-',$where='', $params='')
-{
-//	start_row();
-//            start_column("width='10%'");
-                    label($label);
-//            end_column();
-//            start_column();
-                list_levels($name, $value, $required, $all, $text_all, $where, $params);
-//            end_column();
-//	end_row();
-}
-
-
-/**
- * data list levels (level akses user)
- * @param string $name
- * @param string $selected_id default=''
- * @param boolean $required default=false
- * @param boolean $all default=false
- * @param string $text_all default='-' tulisan dipilihan all
- * @param string $where default='' kondisi query, tuisan where sudah ada tingggal tambahkan sendiri...
- * @param string $params default=''
- */
-function list_levels($name, $selected_id='', $required=false, $all=false, $text_all='-', $where='', $params=''){
-        
-	echo "<select name='$name' "; if($required) echo "required='required'"; echo " class='form-control' $params >";
-        //pilihan semua / kosong
-        if($all){                
-            echo "<option value=''> $text_all </option>";
-        }
-	
-        echo "<option value='1' ";
-            if($selected_id=="1") echo "selected='selected' >Admin</option>";
-        echo "<option value='2' ";
-            if($selected_id=="2") echo "selected='selected' >User Store</option>";
-            
-	echo "</select>";
-}
-//END LEVEL USERS===================================================================
-function list_periode($name, $selected_id='', $required=false, $all=false, $text_all='-', $where='', $params=''){
-        $db_obj = new database();
-        
-    $table = "periode";
-        $query = $db_obj->display_table_all_column($table, $where, false, false, 0, 0, 'id_periode');
-    echo "<select name='$name' "; if($required) echo "required='required'"; echo " class='form-control' ".$params." >";
-        //pilihan semua / kosong
-        if($all){                
-            echo "<option value=''> $text_all </option>";
-        }
-    
-        //loop data
-        while($myrow = $db_obj->db_fetch_array($query)){    
-            echo "<option value='".$myrow['id_periode']."' "; if($selected_id==$myrow['id_periode']) echo "selected='selected'";
-            echo ">".$myrow['semester']." - ".$myrow['tahun']."</option>";       
-        }
-    echo "</select>";
-}
-
-function list_mata_kuliah($name, $selected_id='', $required=false, $all=false, $text_all='-', $where='', $params=''){
-        $db_obj = new database();
-        
-    $table = "mata_kuliah";
-        $query = $db_obj->display_table_all_column($table, $where, false, false, 0, 0, 'id_mk');
-    echo "<select name='$name' "; if($required) echo "required='required'"; echo " class='form-control' ".$params." >";
-        //pilihan semua / kosong
-        if($all){                
-            echo "<option value=''> $text_all </option>";
-        }
-    
-        //loop data
-        while($myrow = $db_obj->db_fetch_array($query)){    
-            echo "<option value='".$myrow['id_mk']."' "; if($selected_id==$myrow['id_mk']) echo "selected='selected'";
-            echo ">".$myrow['n_mk']."</option>";       
-        }
-    echo "</select>";
-}
-
-
-function list_dosen($name, $selected_id='', $required=false, $all=false, $text_all='-', $where='', $params=''){
-        $db_obj = new database();
-        
-    $table = "dosen";
-        $query = $db_obj->display_table_all_column($table, $where, false, false, 0, 0, 'id_dosen');
-    echo "<select name='$name' "; if($required) echo "required='required'"; echo " class='form-control' ".$params." >";
-        //pilihan semua / kosong
-        if($all){                
-            echo "<option value=''> $text_all </option>";
-        }
-    
-        //loop data
-        while($myrow = $db_obj->db_fetch_array($query)){    
-            echo "<option value='".$myrow['id_dosen']."' "; if($selected_id==$myrow['id_dosen']) echo "selected='selected'";
-            echo ">".$myrow['nama']."</option>";       
-        }
-    echo "</select>";
-}
-
-
-function list_bulan($selected_id){
-	echo "<select name='bulan' class='err'>";
-	echo "	<option value=''>--Bulan--</option>";
-	echo "	<option value='01' "; if($selected_id=='01') echo "selected='selected'"; echo ">Januari</option>";
-	echo "	<option value='02' "; if($selected_id=='02') echo "selected='selected'"; echo ">Februari</option>";
-	echo "	<option value='03' "; if($selected_id=='03') echo "selected='selected'"; echo ">Maret</option>";
-	echo "	<option value='04' "; if($selected_id=='04') echo "selected='selected'"; echo ">April</option>";
-	echo "	<option value='05' "; if($selected_id=='05') echo "selected='selected'"; echo ">Mei</option>";
-	echo "	<option value='06' "; if($selected_id=='06') echo "selected='selected'"; echo ">Juni</option>";
-	echo "	<option value='07' "; if($selected_id=='07') echo "selected='selected'"; echo ">Juli</option>";
-	echo "	<option value='08' "; if($selected_id=='08') echo "selected='selected'"; echo ">Agustus</option>";
-	echo "	<option value='09' "; if($selected_id=='09') echo "selected='selected'"; echo ">September</option>";
-	echo "	<option value='10' "; if($selected_id=='10') echo "selected='selected'"; echo ">Oktober</option>";
-	echo "	<option value='11' "; if($selected_id=='11') echo "selected='selected'"; echo ">November</option>";
-	echo "	<option value='12' "; if($selected_id=='12') echo "selected='selected'"; echo ">Desember</option>";	
-	echo "</select>";
-}
-
-function list_numbers($name, $selected_id='', $required=false, $all=false, $text_all='-', $count=5, $params=''){
-        
-	echo "<select name='$name' "; 
-            echo ($required==true)?"required='required'":""; 
-            echo "$params style='width: 100%;'>";
-        //pilihan semua / kosong
-        if($all){                
-            echo "<option value=''> $text_all </option>";
-        }
-	
-        //loop data
-        $no = 1;
-        while($no <= $count){
-            echo "<option value='".$no."' "; 
-            echo ($selected_id==$no)?"selected='selected'":"";
-            echo ">".$no."</option>";	
-            $no++;
-        }
-	echo "</select>";
-}
-
-//END LIST-LIST/COMBOBOX
 //---------------------------------------------------------------------------------
 /**
- * alert popup javascript
+ * peringatan popup javascript
  * @param string $msg pesan
  */
 function phpAlert($msg){
@@ -412,14 +209,8 @@ function input_text_area($name,$value, $required=false, $params='', $texteditor=
 function text_area($label='', $name='', $value=null, $required=false, $params='', $texteditor=false)
 {
     //template bootstrap tanpa row and column
-//	start_row();
-//		start_column("width='10%'");
 			label($label);
-//		end_column();
-//		start_column();
 			input_text_area($name, $value, $required, $params, $texteditor);
-//		end_column();
-//	end_row();
 }
 
 /**
@@ -433,14 +224,8 @@ function text_area($label='', $name='', $value=null, $required=false, $params=''
 function password_field($label='', $name='', $value='', $required=false, $params='')
 {
     //template bootstrap tanpa row and column
-//	start_row();
-//		start_column("width='10%'");
 			label($label);
-//		end_column();
-//		start_column();
 			input_password_text($name, $value, $required, $params);
-//		end_column();
-//	end_row();
 }
 
 /**
@@ -454,14 +239,8 @@ function password_field($label='', $name='', $value='', $required=false, $params
 function text_field($label='', $name='', $value='', $required=false, $params='')
 {
     //template bootstrap tanpa row and column
-//	start_row();
-//		start_column("width='10%'");
 			label($label);
-//		end_column();
-//		start_column();
 			input_free_text($name, $value, $required, $params);
-//		end_column();
-//	end_row();
 }
 
 /**
@@ -487,14 +266,8 @@ function text_input_file($label='', $name='', $required=false, $params=''){
 function amount_field($label='', $name='', $value='', $required=false, $params='')
 {
     //template bootstrap tanpa row and column
-//	start_row();
-//		start_column("width='10%'");
 			label($label);
-//		end_column();
-//		start_column();
 			input_amount_text($name, $value, $required, $params);
-//		end_column();
-//	end_row();
 }
 
 
@@ -509,16 +282,10 @@ function amount_field($label='', $name='', $value='', $required=false, $params='
 function text_label_with_hidden($label='', $name='', $id_value='', $value=null, $params='')
 {
     //template bootstrap tanpa row and column
-//	start_row();
-//		start_column("width='10%'");
 			label($label);
-//		end_column();
-//		start_column();
                     space(2);
                     echo $value;
                     input_hidden($name, $id_value, $params);
-//		end_column();
-//	end_row();
 }
 
 /**
@@ -785,9 +552,7 @@ function price_format($value){
 	return number_format($value,2, ',', '.');
 }
 
-/**
- * cetak link
- */
+// cetak link
 function print_cetak(){
     echo "<a href=\"javascript:window.print()\">Cetak</a>";
 }

@@ -228,7 +228,7 @@ if (isset($_POST['submit'])) {
                 <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead class="bg-success text-white">
                         <tr align="center">
-                            <th width="5%">No</th>
+                            <th width="5%">No.</th>
                             <th>Tanggal</th>
                             <th>Produk</th>
                         </tr>

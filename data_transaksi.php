@@ -211,7 +211,7 @@ $query = $db_object->db_query($sql);
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="bg-success text-white">
                 <tr align="center">
-                    <th>No</th>
+                    <th>No.</th>
                     <th>Tanggal</th>
                     <th>Produk</th>
                     <th width="15%">Aksi</th>

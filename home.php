@@ -16,7 +16,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="index.php?menu=data_transaksi" class="text-secondary text-decoration-none">Data Transaksi</a></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-money-bill-wave fa-2x text-gray-300"></i>
+              <i class="fas fa-book fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="index.php?menu=proses_apriori" class="text-secondary text-decoration-none">Proses Apriori</a></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-sync fa-2x text-gray-300"></i>
+              <i class="fas fa-hourglass-start fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="index.php?menu=proses_cmar" class="text-secondary text-decoration-none">Proses CMAR</a></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-sync fa-2x text-gray-300"></i>
+              <i class="fas fa-hourglass-end fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="index.php?menu=hasil" class="text-secondary text-decoration-none">Data Hasil</a></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-coins fa-2x text-gray-300"></i>
+              <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
