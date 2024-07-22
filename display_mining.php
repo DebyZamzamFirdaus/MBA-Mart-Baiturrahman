@@ -119,10 +119,6 @@ function display_process_hasil_mining($db_object, $id_process)
                 $no = 1;
                 //while ($row1 = $db_object->db_fetch_array($query1)) {
                 foreach ($data_confidence as $key => $val) {
-                    //            $kom1 = explode(" , ", $row1['kombinasi1']);
-                    //            $jika = implode(" Dan ", $kom1);
-                    //            $kom2 = explode(" , ", $row1['kombinasi2']);
-                    //            $maka = implode(" Dan ", $kom2);
                     echo "<tr>";
                     echo "<td class='text-center'>" . $no . "</td>";
                     echo "<td>" . $val['kombinasi1'] . " => " . $val['kombinasi2'] . "</td>";

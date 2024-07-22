@@ -39,7 +39,7 @@ include_once "fungsi.php";
 <body class="bg-gradient-success">
     <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-lg pb-3 pt-3 font-weight-bold">
         <div class="container">
-            <a class="navbar-brand text-success" style="font-weight: 900;" href="index.php"> <i class="fa fa-database mr-2 rotate-n-15"></i> Market Basket Analysis Menggunakan Algoritma Apriori dan CMAR Pada Mart Baiturrahman </a>
+            <a class="navbar-brand text-success" style="font-weight: 1000;" href="index.php"> <i class="fa fa-shopping-cart"></i> Market Basket Analysis Menggunakan Algoritma Apriori dan CMAR Pada Mart Baiturrahman </a>
         </div>
     </nav>
 

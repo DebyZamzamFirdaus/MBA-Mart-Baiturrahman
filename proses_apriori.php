@@ -11,7 +11,7 @@ include_once "display_mining.php";
 ?>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-sync"></i> Data Proses</h1>
+    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-hourglass-start"></i> Data Proses</h1>
 </div>
 
 <?php
@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
         <div class="card shadow mb-4">
             <!-- /.card-header -->
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-table"></i> Langkah 1: Cari Data Transaksi</h6>
+                <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-hourglass-start"></i> Langkah 1: Cari Data Transaksi</h6>
             </div>
 
             <div class="card-body">
@@ -173,7 +173,7 @@ if (isset($_POST['submit'])) {
         <div class="card shadow mb-4">
             <!-- /.card-header -->
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-table"></i> Langkah 2: Input Nilai Support & Confidence</h6>
+                <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-hourglass-start"></i> Langkah 2: Input Nilai Support & Confidence</h6>
             </div>
 
             <div class="card-body">
@@ -220,7 +220,7 @@ if (isset($_POST['submit'])) {
         <div class="card shadow mb-4">
             <!-- /.card-header -->
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-table"></i> Data Transaksi</h6>
+                <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-book"></i> Data Transaksi</h6>
             </div>
 
             <div class="card-body">

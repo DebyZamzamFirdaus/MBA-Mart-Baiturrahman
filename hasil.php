@@ -10,13 +10,13 @@ include_once "mining.php";
 ?>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-coins"></i> Data Hasil</h1>
+    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-clipboard-list"></i> Data Hasil</h1>
 </div>
 
 <div class="card shadow mb-4">
     <!-- /.card-header -->
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-table"></i> Daftar Data Hasil</h6>
+        <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-clipboard-list"></i> Daftar Data Hasil</h6>
     </div>
 
     <div class="card-body">

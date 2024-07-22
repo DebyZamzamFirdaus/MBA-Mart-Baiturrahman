@@ -12,7 +12,7 @@ include_once "import/excel_reader2.php";
 
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-money-bill-wave"></i> Data Transaksi</h1>
+    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-book"></i> Data Transaksi</h1>
 
     <div class="text-right">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalupload">
@@ -190,7 +190,7 @@ $query = $db_object->db_query($sql);
 <div class="card shadow mb-4">
     <!-- /.card-header -->
     <div class="card-header py-3 d-sm-flex align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-table"></i> Daftar Data Transaksi</h6>
+        <h6 class="m-0 font-weight-bold text-success"><i class="fa fa-book"></i> Daftar Data Transaksi</h6>
 
         <form method="post" enctype="multipart/form-data" action="">
             <button name="delete" type="submit" class="btn btn-app btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="fas fa-fw fa-trash"></i> Delete All Data</button>
