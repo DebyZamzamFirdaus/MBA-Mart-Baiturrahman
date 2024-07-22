@@ -50,10 +50,10 @@ include_once "mining.php";
             <thead class="bg-success text-white">
                 <tr align="center">
                     <th>No</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Min Support</th>
-                    <th>Min Confidence</th>
+                    <th>Dari Tanggal</th>
+                    <th>Sampai Tanggal</th>
+                    <th>Minimum Support</th>
+                    <th>Minimum Confidence</th>
                     <th width="15%">Aksi</th>
                 </tr>
             </thead>
@@ -73,6 +73,7 @@ include_once "mining.php";
                         <div class='btn-group' role='group'>
                             <a href="?menu=view_rule&id_process=<?= $row['id'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></a>
                             <a href="export/CLP.php?id_process=<?= $row['id'] ?>" class="btn btn-primary btn-sm" target='blank'><i class="fa fa-print"></i></a>
+                            <a href="?menu=data_hasil&hapus=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm ('Apakah anda yakin untuk meghapus data ini')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                         </div>
                     </td>
                 </tr>

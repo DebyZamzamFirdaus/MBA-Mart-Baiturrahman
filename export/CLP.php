@@ -22,8 +22,8 @@ $i = 0;
 //Mengambil nilai dari query database
 while ($data = $db_object->db_fetch_array($db_query)) {
     $cell[$i][0] = price_format($data['confidence']);
-    $cell[$i][1] = "Jika konsumen membeli ".$data['kombinasi1']
-                    .", maka konsumen juga akan membeli ".$data['kombinasi2'] ;
+    $cell[$i][1] = "Jika membeli ".$data['kombinasi1']
+                    .", maka juga akan membeli ".$data['kombinasi2'] ;
     $i++;
 }
 
@@ -52,7 +52,7 @@ $pdf->Open();
 $pdf->AddPage();
 $pdf->SetFont('Times', 'B', 12);
 //Ln() = untuk pindah baris
-$pdf->Cell(28, 1, 'Laporan Hasil Analisa', 'LRTB', 0, 'C'); //TBLR (untuk garis)=> B = Bottom,
+$pdf->Cell(28, 1, 'Laporan Hasil Analisa Mart Baiturrahman', 'LRTB', 0, 'C'); //TBLR (untuk garis)=> B = Bottom,
 $pdf->Ln();
 $pdf->Ln();
 

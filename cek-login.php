@@ -31,7 +31,6 @@ if ($num_rows > 0) {
      header("location:login.php?login=1");
 }
 
-
 function get_sql_login_admin_page($user, $pass){
     $sql = "SELECT * FROM users"
         . " WHERE username = '" . $user . "' AND password = MD5('" . $pass . "')";

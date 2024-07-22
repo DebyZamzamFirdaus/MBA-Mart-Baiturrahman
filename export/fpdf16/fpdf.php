@@ -1608,54 +1608,6 @@ function _putimages()
 }
 
 
-// function _putimages()
-// {
-// 	$filter=($this->compress) ? '/Filter /FlateDecode ' : '';
-// 	reset($this->images);
-// 	while(list($file,$info)=each($this->images))
-// 	{
-// 		$this->_newobj();
-// 		$this->images[$file]['n']=$this->n;
-// 		$this->_out('<</Type /XObject');
-// 		$this->_out('/Subtype /Image');
-// 		$this->_out('/Width '.$info['w']);
-// 		$this->_out('/Height '.$info['h']);
-// 		if($info['cs']=='Indexed')
-// 			$this->_out('/ColorSpace [/Indexed /DeviceRGB '.(strlen($info['pal'])/3-1).' '.($this->n+1).' 0 R]');
-// 		else
-// 		{
-// 			$this->_out('/ColorSpace /'.$info['cs']);
-// 			if($info['cs']=='DeviceCMYK')
-// 				$this->_out('/Decode [1 0 1 0 1 0 1 0]');
-// 		}
-// 		$this->_out('/BitsPerComponent '.$info['bpc']);
-// 		if(isset($info['f']))
-// 			$this->_out('/Filter /'.$info['f']);
-// 		if(isset($info['parms']))
-// 			$this->_out($info['parms']);
-// 		if(isset($info['trns']) && is_array($info['trns']))
-// 		{
-// 			$trns='';
-// 			for($i=0;$i<count($info['trns']);$i++)
-// 				$trns.=$info['trns'][$i].' '.$info['trns'][$i].' ';
-// 			$this->_out('/Mask ['.$trns.']');
-// 		}
-// 		$this->_out('/Length '.strlen($info['data']).'>>');
-// 		$this->_putstream($info['data']);
-// 		unset($this->images[$file]['data']);
-// 		$this->_out('endobj');
-// 		//Palette
-// 		if($info['cs']=='Indexed')
-// 		{
-// 			$this->_newobj();
-// 			$pal=($this->compress) ? gzcompress($info['pal']) : $info['pal'];
-// 			$this->_out('<<'.$filter.'/Length '.strlen($pal).'>>');
-// 			$this->_putstream($pal);
-// 			$this->_out('endobj');
-// 		}
-// 	}
-// }
-
 function _putxobjectdict()
 {
 	foreach($this->images as $image)

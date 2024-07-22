@@ -181,7 +181,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-5">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="">Min Support</span>
+                                <span class="input-group-text" id="">Minimum Support</span>
                             </div>
                             <input name="min_support" autocomplete="off" type="text" class="form-control" />
                         </div>
@@ -189,7 +189,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-5">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="">Min Confidence</span>
+                                <span class="input-group-text" id="">Minimum Confidence</span>
                             </div>
                             <input name="min_confidence" autocomplete="off" type="text" class="form-control" />
                         </div>

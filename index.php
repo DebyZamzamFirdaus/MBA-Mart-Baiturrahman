@@ -52,8 +52,8 @@ include_once 'fungsi.php';
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-database"></i>
+        <div class="sidebar-brand-icon">
+          <i class="fas fa-mosque"></i>
         </div>
         <div class="sidebar-brand-text mx-3">APRIORI CMAR</div>
       </a>
@@ -71,7 +71,7 @@ include_once 'fungsi.php';
       <!-- Nav Item - Dashboard -->
       <li class="nav-item <?php echo ($menu_active == '') ? "active" : ""; ?>">
         <a class="nav-link" href="index.php">
-          <i class="fas fa-fw fa-home"></i>
+          <i class="fas fa-fw fa-mosque"></i>
           <span>Dashboard</span></a>
       </li>
 
@@ -84,7 +84,7 @@ include_once 'fungsi.php';
                           echo ($menu_active == 'edit_transaksi') ? "active" : "";
                           ?>">
         <a class="nav-link" href="index.php?menu=data_transaksi">
-          <i class="fas fa-fw fa-money-bill-wave"></i>
+          <i class="fas fa-fw fa-book"></i>
           <span>Data Transaksi</span></a>
       </li>
 
