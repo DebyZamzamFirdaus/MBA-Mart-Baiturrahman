@@ -12,7 +12,7 @@ include_once "display_mining.php";
 
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-coins"></i> Data Hasil</h1>
+    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-clipboard-list"></i> Data Hasil</h1>
 
     <a href="?menu=hasil" class="btn btn-secondary"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
 </div>
