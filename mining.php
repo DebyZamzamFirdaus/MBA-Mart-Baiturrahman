@@ -35,10 +35,6 @@ function reset_hitungan($db_object, $id_process){
 function is_exist_variasi_itemset($array_item1, $array_item2, $item1, $item2) {
     //$return = true;
     
-//    $bool1 = array_search(strtoupper($item2), array_map('strtoupper', $array_item1));
-//    $bool2 = array_search(strtoupper($item1), array_map('strtoupper', $array_item2));
-//    $bool3 = array_search(strtoupper($item2), array_map('strtoupper', $array_item2));
-//    $bool4 = array_search(strtoupper($item1), array_map('strtoupper', $array_item1));
     $bool1 = array_keys(array_map('strtoupper', $array_item1), strtoupper($item1));
     $bool2 = array_keys(array_map('strtoupper', $array_item2), strtoupper($item2));
     $bool3 = array_keys(array_map('strtoupper', $array_item2), strtoupper($item1));
