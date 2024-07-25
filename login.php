@@ -17,8 +17,8 @@ if ($login == 1) {
 include_once "fungsi.php";
 ?>
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Market Basket Analysis</title>
@@ -34,60 +34,90 @@ include_once "fungsi.php";
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-gradient-success">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-lg pb-3 pt-3 font-weight-bold">
-        <div class="container">
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="img"><img src="img/Logo.png" class="logo"></a>
             <a class="navbar-brand text-success" style="font-weight: 1000;" href="index.php"> <i class="fa fa-shopping-cart"></i> Market Basket Analysis Menggunakan Algoritma Apriori dan CMAR Pada Mart Baiturrahman </a>
-        </div>
-    </nav>
+        </header>
 
-    <div class="container">
-        <!-- Outer Row -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-xl-5 col-lg-6 col-md-8 mt-5">
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login Account</h1>
+        <div class="content">
+            <div class="container">
+                <!-- Outer Row -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-xl-5 col-lg-6 col-md-8 mt-5">
+                        <div class="card o-hidden border-0 shadow-lg my-5">
+                            <div class="card-body p-0">
+                                <!-- Nested Row within Card Body -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="p-5">
+                                            <div class="text-center">
+                                                <h1 class="h4 text-gray-900 mb-4">Login</h1>
+                                            </div>
+                                            <?php
+                                            if (isset($komen)) {
+                                                display_error("Login failed");
+                                            }
+                                            ?>
+                                            <form class="user" action="cek-login.php" method="post">
+                                                <div class="form-group">
+                                                    <input autocomplete="off" name="username" type="text" class="form-control form-control-user" id="exampleInputUser" required="" placeholder="Username" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" required="" placeholder="Password" />
+                                                </div>
+                                                <button type="submit" class="btn btn-success btn-block btn-user"><i class="fas fa-fw fa-sign-in-alt mr-1"></i> Log In</button>
+                                            </form>
+                                        </div>
                                     </div>
-                                    <?php
-                                    if (isset($komen)) {
-                                        display_error("Login failed");
-                                    }
-                                    ?>
-                                    <form class="user" action="cek-login.php" method="post">
-                                        <div class="form-group">
-                                            <input autocomplete="off" name="username" type="text" class="form-control form-control-user" id="exampleInputUser" required="" placeholder="Username" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" required="" placeholder="Password" />
-                                        </div>
-                                        <button type="submit" class="btn btn-success btn-block btn-user"><i class="fas fa-fw fa-sign-in-alt mr-1"></i> Log In</button>
-                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="imgBox">
+                <img src="img/img11.png" class="market">
+            </div>
         </div>
-    </div>
+        
+        <ul class="thumb">
+            <li><img src="img/thumb11.png" onclick="imgSlider('img/img11.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb22.png" onclick="imgSlider('img/img22.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb33.png" onclick="imgSlider('img/img33.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb44.png" onclick="imgSlider('img/img44.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb55.png" onclick="imgSlider('img/img55.png');changeCircleColor('#017143')"></li>
+        </ul>
+    </section>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.market').src = anything;
+        }
 
-    <!-- Core plugin JavaScript-->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="assets/js/sb-admin-2.min.js"></script>
+    <body class="bg-gradient-success">
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="assets/js/sb-admin-2.min.js"></script>
+    </body>
 </body>
 
 </html>
