@@ -91,13 +91,7 @@ include_once 'fungsi.php';
       <li class="nav-item <?php echo ($menu_active == 'proses_apriori') ? "active" : ""; ?>">
         <a class="nav-link" href="index.php?menu=proses_apriori">
           <i class="fas fa-fw fa-hourglass-start"></i>
-          <span>Proses Apriori</span></a>
-      </li>
-
-      <li class="nav-item <?php echo ($menu_active == 'proses_cmar') ? "active" : ""; ?>">
-        <a class="nav-link" href="index.php?menu=proses_cmar">
-          <i class="fas fa-fw fa-hourglass-end"></i>
-          <span>Proses CMAR</span></a>
+          <span>Data Proses</span></a>
       </li>
 
 
