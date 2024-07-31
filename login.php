@@ -1,19 +1,25 @@
 <?php
-session_start();
+session_start(); // Memulai sesi untuk pengguna
 
+// Jika ada sesi 'apriori_id', alihkan ke halaman index.php
 if (isset($_SESSION['apriori_id'])) {
     header("location:index.php");
 }
 
+// Inisialisasi variabel login dengan nilai 0
 $login = 0;
+
+// Jika terdapat parameter 'login' pada URL, set nilai $login dengan nilai parameter tersebut
 if (isset($_GET['login'])) {
     $login = $_GET['login'];
 }
 
+// Jika nilai $login adalah 1, set pesan kesalahan untuk ditampilkan
 if ($login == 1) {
     $komen = "Silahkan Login Ulang, Cek username dan Password Anda!!";
 }
 
+// Mengikutkan file fungsi.php
 include_once "fungsi.php";
 ?>
 
@@ -60,6 +66,7 @@ include_once "fungsi.php";
                                                 <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                             </div>
                                             <?php
+                                            // Jika ada pesan kesalahan, tampilkan
                                             if (isset($komen)) {
                                                 display_error("Login failed");
                                             }
@@ -95,11 +102,14 @@ include_once "fungsi.php";
         </ul>
     </section>
 
+    <!-- Fungsi JavaScript untuk mengubah gambar dan warna latar belakang lingkaran -->
     <script type="text/javascript">
+        // Fungsi untuk mengganti gambar pada slider
         function imgSlider(anything) {
             document.querySelector('.market').src = anything;
         }
 
+        // Fungsi untuk mengganti warna latar belakang lingkaran
         function changeCircleColor(color) {
             const circle = document.querySelector('.circle');
             circle.style.background = color;
